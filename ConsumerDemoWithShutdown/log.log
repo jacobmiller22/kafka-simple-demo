@@ -1,0 +1,115 @@
+[main] INFO ConsumerDemoWithShutdown - I am a Kafka Consumer
+[main] INFO org.apache.kafka.clients.consumer.ConsumerConfig - ConsumerConfig values: 
+	allow.auto.create.topics = true
+	auto.commit.interval.ms = 5000
+	auto.offset.reset = earliest
+	bootstrap.servers = [127.0.0.1:9092]
+	check.crcs = true
+	client.dns.lookup = use_all_dns_ips
+	client.id = consumer-my-second-application-1
+	client.rack = 
+	connections.max.idle.ms = 540000
+	default.api.timeout.ms = 60000
+	enable.auto.commit = true
+	exclude.internal.topics = true
+	fetch.max.bytes = 52428800
+	fetch.max.wait.ms = 500
+	fetch.min.bytes = 1
+	group.id = my-second-application
+	group.instance.id = null
+	heartbeat.interval.ms = 3000
+	interceptor.classes = []
+	internal.leave.group.on.close = true
+	internal.throw.on.fetch.stable.offset.unsupported = false
+	isolation.level = read_uncommitted
+	key.deserializer = class org.apache.kafka.common.serialization.StringDeserializer
+	max.partition.fetch.bytes = 1048576
+	max.poll.interval.ms = 300000
+	max.poll.records = 500
+	metadata.max.age.ms = 300000
+	metric.reporters = []
+	metrics.num.samples = 2
+	metrics.recording.level = INFO
+	metrics.sample.window.ms = 30000
+	partition.assignment.strategy = [class org.apache.kafka.clients.consumer.RangeAssignor, class org.apache.kafka.clients.consumer.CooperativeStickyAssignor]
+	receive.buffer.bytes = 65536
+	reconnect.backoff.max.ms = 1000
+	reconnect.backoff.ms = 50
+	request.timeout.ms = 30000
+	retry.backoff.ms = 100
+	sasl.client.callback.handler.class = null
+	sasl.jaas.config = null
+	sasl.kerberos.kinit.cmd = /usr/bin/kinit
+	sasl.kerberos.min.time.before.relogin = 60000
+	sasl.kerberos.service.name = null
+	sasl.kerberos.ticket.renew.jitter = 0.05
+	sasl.kerberos.ticket.renew.window.factor = 0.8
+	sasl.login.callback.handler.class = null
+	sasl.login.class = null
+	sasl.login.refresh.buffer.seconds = 300
+	sasl.login.refresh.min.period.seconds = 60
+	sasl.login.refresh.window.factor = 0.8
+	sasl.login.refresh.window.jitter = 0.05
+	sasl.mechanism = GSSAPI
+	security.protocol = PLAINTEXT
+	security.providers = null
+	send.buffer.bytes = 131072
+	session.timeout.ms = 45000
+	socket.connection.setup.timeout.max.ms = 30000
+	socket.connection.setup.timeout.ms = 10000
+	ssl.cipher.suites = null
+	ssl.enabled.protocols = [TLSv1.2, TLSv1.3]
+	ssl.endpoint.identification.algorithm = https
+	ssl.engine.factory.class = null
+	ssl.key.password = null
+	ssl.keymanager.algorithm = SunX509
+	ssl.keystore.certificate.chain = null
+	ssl.keystore.key = null
+	ssl.keystore.location = null
+	ssl.keystore.password = null
+	ssl.keystore.type = JKS
+	ssl.protocol = TLSv1.3
+	ssl.provider = null
+	ssl.secure.random.implementation = null
+	ssl.trustmanager.algorithm = PKIX
+	ssl.truststore.certificates = null
+	ssl.truststore.location = null
+	ssl.truststore.password = null
+	ssl.truststore.type = JKS
+	value.deserializer = class org.apache.kafka.common.serialization.StringDeserializer
+
+[main] INFO org.apache.kafka.common.utils.AppInfoParser - Kafka version: 3.0.0
+[main] INFO org.apache.kafka.common.utils.AppInfoParser - Kafka commitId: 8cb0a5e9d3441962
+[main] INFO org.apache.kafka.common.utils.AppInfoParser - Kafka startTimeMs: 1655503054588
+[main] INFO org.apache.kafka.clients.consumer.KafkaConsumer - [Consumer clientId=consumer-my-second-application-1, groupId=my-second-application] Subscribed to topic(s): demo-java
+[main] INFO ConsumerDemoWithShutdown - Polling
+[main] INFO org.apache.kafka.clients.Metadata - [Consumer clientId=consumer-my-second-application-1, groupId=my-second-application] Cluster ID: ab06xXA5TsugAS6NuiR4HA
+[main] INFO org.apache.kafka.clients.consumer.internals.ConsumerCoordinator - [Consumer clientId=consumer-my-second-application-1, groupId=my-second-application] Discovered group coordinator jacobs-mbp:9092 (id: 2147483647 rack: null)
+[main] INFO org.apache.kafka.clients.consumer.internals.ConsumerCoordinator - [Consumer clientId=consumer-my-second-application-1, groupId=my-second-application] (Re-)joining group
+[main] INFO org.apache.kafka.clients.consumer.internals.ConsumerCoordinator - [Consumer clientId=consumer-my-second-application-1, groupId=my-second-application] Request joining group due to: need to re-join with the given member-id
+[main] INFO org.apache.kafka.clients.consumer.internals.ConsumerCoordinator - [Consumer clientId=consumer-my-second-application-1, groupId=my-second-application] (Re-)joining group
+[main] INFO org.apache.kafka.clients.consumer.internals.ConsumerCoordinator - [Consumer clientId=consumer-my-second-application-1, groupId=my-second-application] Successfully joined group with generation Generation{generationId=5, memberId='consumer-my-second-application-1-f8370fc0-6a21-403a-a886-1664fd99c5e2', protocol='range'}
+[main] INFO org.apache.kafka.clients.consumer.internals.ConsumerCoordinator - [Consumer clientId=consumer-my-second-application-1, groupId=my-second-application] Finished assignment for group at generation 5: {consumer-my-second-application-1-f8370fc0-6a21-403a-a886-1664fd99c5e2=Assignment(partitions=[demo-java-0, demo-java-1, demo-java-2])}
+[main] INFO org.apache.kafka.clients.consumer.internals.ConsumerCoordinator - [Consumer clientId=consumer-my-second-application-1, groupId=my-second-application] Successfully synced group in generation Generation{generationId=5, memberId='consumer-my-second-application-1-f8370fc0-6a21-403a-a886-1664fd99c5e2', protocol='range'}
+[main] INFO org.apache.kafka.clients.consumer.internals.ConsumerCoordinator - [Consumer clientId=consumer-my-second-application-1, groupId=my-second-application] Notifying assignor about the new Assignment(partitions=[demo-java-0, demo-java-1, demo-java-2])
+[main] INFO org.apache.kafka.clients.consumer.internals.ConsumerCoordinator - [Consumer clientId=consumer-my-second-application-1, groupId=my-second-application] Adding newly assigned partitions: demo-java-0, demo-java-1, demo-java-2
+[main] INFO org.apache.kafka.clients.consumer.internals.ConsumerCoordinator - [Consumer clientId=consumer-my-second-application-1, groupId=my-second-application] Setting offset for partition demo-java-2 to the committed offset FetchPosition{offset=13, offsetEpoch=Optional[0], currentLeader=LeaderAndEpoch{leader=Optional[jacobs-mbp:9092 (id: 0 rack: null)], epoch=0}}
+[main] INFO org.apache.kafka.clients.consumer.internals.ConsumerCoordinator - [Consumer clientId=consumer-my-second-application-1, groupId=my-second-application] Setting offset for partition demo-java-0 to the committed offset FetchPosition{offset=23, offsetEpoch=Optional[0], currentLeader=LeaderAndEpoch{leader=Optional[jacobs-mbp:9092 (id: 0 rack: null)], epoch=0}}
+[main] INFO org.apache.kafka.clients.consumer.internals.ConsumerCoordinator - [Consumer clientId=consumer-my-second-application-1, groupId=my-second-application] Setting offset for partition demo-java-1 to the committed offset FetchPosition{offset=21, offsetEpoch=Optional[0], currentLeader=LeaderAndEpoch{leader=Optional[jacobs-mbp:9092 (id: 0 rack: null)], epoch=0}}
+[main] INFO ConsumerDemoWithShutdown - Polling
+[main] INFO ConsumerDemoWithShutdown - Polling
+[main] INFO ConsumerDemoWithShutdown - Polling
+[main] INFO ConsumerDemoWithShutdown - Polling
+[Thread-0] INFO ConsumerDemoWithShutdown - Detected a shutdown, let's exit by calling consumer.wakeup()...
+[main] INFO ConsumerDemoWithShutdown - Wakeup exception!
+[main] INFO org.apache.kafka.clients.consumer.internals.ConsumerCoordinator - [Consumer clientId=consumer-my-second-application-1, groupId=my-second-application] Revoke previously assigned partitions demo-java-0, demo-java-1, demo-java-2
+[main] INFO org.apache.kafka.clients.consumer.internals.ConsumerCoordinator - [Consumer clientId=consumer-my-second-application-1, groupId=my-second-application] Member consumer-my-second-application-1-f8370fc0-6a21-403a-a886-1664fd99c5e2 sending LeaveGroup request to coordinator jacobs-mbp:9092 (id: 2147483647 rack: null) due to the consumer is being closed
+[main] INFO org.apache.kafka.clients.consumer.internals.ConsumerCoordinator - [Consumer clientId=consumer-my-second-application-1, groupId=my-second-application] Resetting generation due to: consumer pro-actively leaving the group
+[main] INFO org.apache.kafka.clients.consumer.internals.ConsumerCoordinator - [Consumer clientId=consumer-my-second-application-1, groupId=my-second-application] Request joining group due to: consumer pro-actively leaving the group
+[main] INFO org.apache.kafka.common.metrics.Metrics - Metrics scheduler closed
+[main] INFO org.apache.kafka.common.metrics.Metrics - Closing reporter org.apache.kafka.common.metrics.JmxReporter
+[main] INFO org.apache.kafka.common.metrics.Metrics - Metrics reporters closed
+[main] INFO org.apache.kafka.common.utils.AppInfoParser - App info kafka.consumer for consumer-my-second-application-1 unregistered
+[main] INFO ConsumerDemoWithShutdown - The consumer is now gracefully closed
+
+Process finished with exit code 130 (interrupted by signal 2: SIGINT)
